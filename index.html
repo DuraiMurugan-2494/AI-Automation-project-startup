@@ -1,0 +1,242 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+<meta charset="UTF-8">
+<meta name="viewport" content="width=device-width, initial-scale=1.0">
+<meta name="description" content="AI automation, intelligent document processing, enterprise AI agents and Quality Engineering for growing businesses in Bangalore and India.">
+<meta name="theme-color" content="#08111f">
+<title>AI Automation Studio | AI Automation for Growing Businesses</title>
+<style>
+:root{
+ --ink:#0b1220;--ink2:#172033;--muted:#667085;--muted2:#98a2b3;--bg:#f7f9fc;--white:#fff;
+ --line:#e5e7eb;--accent:#635bff;--accent2:#13b8a6;--blue:#2563eb;--dark:#08111f;
+ --soft:#eef2ff;--soft2:#ecfdf8;--shadow:0 20px 60px rgba(15,23,42,.10);
+ --radius:20px;--max:1180px;
+}
+*{box-sizing:border-box}html{scroll-behavior:smooth}
+body{margin:0;background:var(--bg);color:var(--ink);font:15px/1.65 Inter,ui-sans-serif,system-ui,-apple-system,BlinkMacSystemFont,"Segoe UI",sans-serif}
+a{text-decoration:none;color:inherit}button,input,textarea,select{font:inherit}
+body{overflow-x:hidden}.mobile-menu{display:none;background:#fff;border-bottom:1px solid var(--line)}
+.container{width:min(var(--max),92%);margin:auto}
+.topbar{background:var(--dark);color:#dbe3ef;font-size:12px;text-align:center;padding:7px 12px}
+nav{position:sticky;top:0;z-index:100;background:rgba(247,249,252,.9);backdrop-filter:blur(18px);border-bottom:1px solid rgba(229,231,235,.85)}
+.navin{height:76px;display:flex;align-items:center;justify-content:space-between;gap:30px}
+.logo{display:flex;align-items:center;gap:10px;font-weight:850;letter-spacing:-.03em;font-size:17px}
+.mark{width:36px;height:36px;border-radius:11px;background:linear-gradient(135deg,#635bff,#13b8a6);display:grid;place-items:center;color:#fff;font-weight:900}
+.links{display:flex;align-items:center;gap:25px;color:#475467;font-size:13px;font-weight:650}
+.links a:hover{color:var(--ink)}
+.nav-actions{display:flex;align-items:center;gap:10px}.menu{display:none;border:0;background:transparent;font-size:25px}
+.btn{display:inline-flex;align-items:center;justify-content:center;gap:8px;border:1px solid var(--line);background:#fff;color:var(--ink);border-radius:11px;padding:11px 16px;font-size:13px;font-weight:750;cursor:pointer;transition:.2s}
+.btn:hover{transform:translateY(-1px);box-shadow:0 8px 22px rgba(15,23,42,.08)}
+:focus-visible{outline:3px solid rgba(99,91,255,.35);outline-offset:3px}
+.btn.primary{background:var(--ink);border-color:var(--ink);color:#fff}.btn.accent{background:var(--accent);border-color:var(--accent);color:#fff}
+.hero{position:relative;overflow:hidden;padding:92px 0 74px;background:
+ radial-gradient(circle at 82% 20%,rgba(99,91,255,.13),transparent 32%),
+ radial-gradient(circle at 15% 10%,rgba(19,184,166,.09),transparent 30%)}
+.hero-grid{display:grid;grid-template-columns:1.08fr .92fr;gap:70px;align-items:center}
+.badge{display:inline-flex;align-items:center;gap:8px;border:1px solid #dfe3eb;background:#fff;border-radius:999px;padding:6px 11px;font-size:12px;font-weight:750;color:#475467;box-shadow:0 5px 18px rgba(16,24,40,.04)}
+.live{width:7px;height:7px;background:#13b8a6;border-radius:50%;box-shadow:0 0 0 5px #d9faf3}
+h1{font-size:clamp(46px,6.5vw,76px);line-height:.99;letter-spacing:-.065em;margin:23px 0 22px;max-width:800px}
+.gradient{background:linear-gradient(100deg,#111827 12%,#635bff 62%,#13b8a6);-webkit-background-clip:text;background-clip:text;color:transparent}
+.hero-copy{font-size:19px;color:var(--muted);max-width:690px}
+.actions{display:flex;gap:11px;flex-wrap:wrap;margin-top:29px}
+.micro{display:flex;gap:20px;flex-wrap:wrap;margin-top:28px;color:#667085;font-size:12px}.micro span:before{content:"✓";color:#13b8a6;font-weight:900;margin-right:6px}
+.hero-card{background:rgba(255,255,255,.82);border:1px solid #e1e5ed;border-radius:25px;padding:18px;box-shadow:var(--shadow);transform:rotate(1deg)}
+.browser{border:1px solid var(--line);border-radius:18px;overflow:hidden;background:#fbfcfe}.browserbar{height:40px;background:#f1f3f7;display:flex;align-items:center;gap:6px;padding:0 13px}.browserbar i{width:7px;height:7px;border-radius:50%;background:#c8ced8}.screen{padding:24px}.screen-label{font-size:11px;color:var(--muted);text-transform:uppercase;letter-spacing:.1em;font-weight:800}.metric{font-size:34px;font-weight:850;letter-spacing:-.04em;margin:3px 0 15px}.mini-grid{display:grid;grid-template-columns:1fr 1fr;gap:10px}.mini{border:1px solid var(--line);background:#fff;border-radius:13px;padding:13px}.mini b{display:block;font-size:14px}.mini small{color:var(--muted);font-size:11px}.pipeline{margin-top:12px;display:grid;gap:7px}.pipe{padding:9px 11px;border-radius:9px;background:#f5f7fb;font-size:11px;font-weight:750}.pipe.on{background:#eef2ff;color:#4f46e5}
+.trust{border-top:1px solid var(--line);border-bottom:1px solid var(--line);background:#fff}.trustin{padding:24px 0;display:flex;justify-content:space-between;align-items:center;gap:20px;flex-wrap:wrap}.trust-label{font-size:11px;text-transform:uppercase;letter-spacing:.13em;color:#98a2b3;font-weight:800}.trust-items{display:flex;gap:24px;flex-wrap:wrap;color:#667085;font-weight:750;font-size:12px}
+section{padding:94px 0}.eyebrow{color:var(--accent);font-size:11px;font-weight:850;text-transform:uppercase;letter-spacing:.15em}
+.section-head{max-width:760px;margin-bottom:45px}h2{font-size:clamp(32px,4vw,50px);line-height:1.07;letter-spacing:-.05em;margin:10px 0 14px}.lead{font-size:17px;color:var(--muted)}
+.grid4{display:grid;grid-template-columns:repeat(4,1fr);gap:15px}.card{background:#fff;border:1px solid var(--line);border-radius:var(--radius);padding:25px;box-shadow:0 6px 25px rgba(16,24,40,.035);transition:.25s}.card:hover{transform:translateY(-4px);box-shadow:var(--shadow)}
+.icon{width:43px;height:43px;border-radius:12px;background:var(--soft);color:#5148df;display:grid;place-items:center;font-size:12px;font-weight:900;margin-bottom:22px}.card h3{font-size:18px;margin:0 0 8px;letter-spacing:-.025em}.card p{margin:0;color:var(--muted);font-size:13px}
+.dark{background:var(--dark);color:#fff}.dark .lead{color:#aab5c6}.dark .eyebrow{color:#8ff0df}
+.problem-grid{display:grid;grid-template-columns:1fr 1fr;gap:70px;align-items:center}.list{display:grid;gap:0}.list-item{display:flex;gap:14px;padding:18px 0;border-bottom:1px solid rgba(255,255,255,.1);color:#d8dfeb}.check{color:#8ff0df;font-weight:900}
+.arch{background:#fff;border:1px solid #273449;border-radius:23px;padding:22px;box-shadow:0 25px 70px rgba(0,0,0,.22);color:var(--ink)}.arch-top{display:flex;justify-content:space-between;margin-bottom:17px}.arch-title{font-size:11px;text-transform:uppercase;letter-spacing:.13em;color:#98a2b3;font-weight:850}.status{font-size:10px;color:#0f766e;background:#ecfdf8;border-radius:99px;padding:4px 8px;font-weight:800}.flow{display:grid;gap:7px}.node{border:1px solid var(--line);background:#fafbfc;border-radius:11px;text-align:center;padding:13px;font-weight:750;font-size:13px}.node.accent{background:#eef2ff;border-color:#c7d2fe;color:#4338ca}.arrow{text-align:center;color:#98a2b3;height:8px}
+.process{display:grid;grid-template-columns:repeat(4,1fr);gap:15px}.stepnum{font-size:11px;color:var(--accent);font-weight:900}.step h3{margin:8px 0 7px}.step p{color:var(--muted);font-size:13px;margin:0}
+.cases{display:grid;grid-template-columns:repeat(3,1fr);gap:16px}.case{min-height:210px;border:1px solid var(--line);border-radius:20px;background:#fff;padding:27px;position:relative;overflow:hidden}.case:after{content:"";position:absolute;width:150px;height:150px;border-radius:50%;right:-70px;bottom:-80px;background:#eef2ff}.case-tag{font-size:11px;color:#4f46e5;font-weight:850;text-transform:uppercase;letter-spacing:.1em}.case h3{font-size:20px;letter-spacing:-.03em;margin:9px 0}.case p{color:var(--muted);font-size:13px;max-width:310px}
+.package-grid{display:grid;grid-template-columns:repeat(3,1fr);gap:16px}.package{background:#fff;border:1px solid var(--line);border-radius:20px;padding:27px}.package.featured{border:2px solid #8b85ff;box-shadow:var(--shadow);position:relative}.ribbon{position:absolute;right:16px;top:16px;background:#eef2ff;color:#4f46e5;padding:5px 8px;border-radius:99px;font-size:10px;font-weight:850}.package h3{margin:0;font-size:20px}.package .sub{color:var(--muted);font-size:13px;margin:6px 0 18px}.package ul{list-style:none;padding:0;margin:0}.package li{font-size:13px;margin:10px 0;color:#475467}.package li:before{content:"✓";color:#13a88f;font-weight:900;margin-right:8px}
+.about-grid{display:grid;grid-template-columns:.9fr 1.1fr;gap:70px;align-items:start}.principles{display:grid;grid-template-columns:1fr 1fr;gap:12px}.principle{padding:18px;border:1px solid var(--line);border-radius:15px;background:#fff}.principle b{display:block;margin-bottom:4px}.principle span{font-size:12px;color:var(--muted)}
+.faq{max-width:850px}.faq details{background:#fff;border:1px solid var(--line);border-radius:14px;margin:9px 0;padding:17px 20px}.faq summary{cursor:pointer;font-weight:750}.faq p{color:var(--muted);font-size:13px;margin-bottom:0}
+.cta{padding:0 0 95px}.cta-box{border-radius:27px;background:linear-gradient(120deg,#0b1220,#1e2a45);padding:55px;color:#fff;display:flex;align-items:center;justify-content:space-between;gap:30px}.cta-box h2{max-width:650px}.cta-box p{color:#b7c1d0;max-width:620px}.cta-box .btn{background:#fff;color:#101827;border-color:#fff}
+.contact-grid{display:grid;grid-template-columns:.8fr 1.2fr;gap:55px}.contact-points{display:grid;gap:12px;margin-top:25px}.contact-point{padding:16px;border:1px solid var(--line);background:#fff;border-radius:14px}.contact-point b{display:block;font-size:13px}.contact-point span{font-size:12px;color:var(--muted)}
+form{background:#fff;border:1px solid var(--line);border-radius:22px;padding:28px;box-shadow:0 10px 35px rgba(16,24,40,.05)}.form-grid{display:grid;grid-template-columns:1fr 1fr;gap:14px}.field{display:grid;gap:6px}.field.full{grid-column:1/-1}.field label{font-size:11px;font-weight:800;color:#475467;text-transform:uppercase;letter-spacing:.08em}.field input,.field textarea,.field select{width:100%;border:1px solid #dfe3ea;border-radius:10px;padding:11px 12px;outline:0;background:#fbfcfe}.field textarea{min-height:125px;resize:vertical}.field input:focus,.field textarea:focus,.field select:focus{border-color:#8b85ff;box-shadow:0 0 0 3px #eef2ff}.form-note{font-size:11px;color:#98a2b3;margin:11px 0}
+footer{background:#fff;border-top:1px solid var(--line);padding:32px 0;color:#667085;font-size:12px}.footer-grid{display:flex;justify-content:space-between;gap:30px;align-items:center}.footer-links{display:flex;gap:20px}
+#toast{position:fixed;right:22px;bottom:22px;background:#101827;color:#fff;padding:13px 16px;border-radius:12px;box-shadow:var(--shadow);font-size:13px;opacity:0;pointer-events:none;transform:translateY(10px);transition:.25s;z-index:200}#toast.show{opacity:1;transform:none}
+.reveal{opacity:0;transform:translateY(18px);transition:.65s ease}.reveal.visible{opacity:1;transform:none}
+@media(max-width:980px){.hero-grid,.problem-grid,.about-grid,.contact-grid{grid-template-columns:1fr}.hero-card{max-width:620px}.grid4,.process{grid-template-columns:1fr 1fr}.cases{grid-template-columns:1fr 1fr}.package-grid{grid-template-columns:1fr}}
+@media(max-width:720px){.links,.nav-actions .btn{display:none}.menu{display:block}.mobile-menu a{display:block;padding:13px 4%;font-size:14px;font-weight:650;border-top:1px solid #f0f1f4}.grid4,.process,.cases,.principles,.form-grid{grid-template-columns:1fr}.field.full{grid-column:auto}.hero{padding:70px 0 55px}.hero-card{transform:none}.hero-copy{font-size:17px}h1{font-size:49px}section{padding:68px 0}.cta-box{padding:34px;display:block}.cta-box .btn{margin-top:10px}.footer-grid{display:block}.footer-links{margin-top:15px;flex-wrap:wrap}}
+</style>
+</head>
+<body>
+<div class="topbar">Practical AI automation for growing businesses · Bangalore & India</div>
+
+<nav>
+ <div class="container navin">
+  <a class="logo" href="#home"><span class="mark">A</span><span>AI Automation Studio</span></a>
+  <div class="links">
+   <a href="#services">Services</a><a href="#solutions">Solutions</a><a href="#process">Process</a><a href="#about">About</a><a href="#faq">FAQ</a>
+  </div>
+  <div class="nav-actions"><a class="btn primary" href="#contact">Book assessment</a><button class="menu" aria-label="Open menu" onclick="toggleMenu()">☰</button></div>
+ </div>
+ <div id="mobileMenu" class="mobile-menu">
+  <a href="#services" onclick="toggleMenu()">Services</a><a href="#solutions" onclick="toggleMenu()">Solutions</a><a href="#process" onclick="toggleMenu()">Process</a><a href="#about" onclick="toggleMenu()">About</a><a href="#faq" onclick="toggleMenu()">FAQ</a><a href="#contact" onclick="toggleMenu()">Contact</a>
+ </div>
+</nav>
+
+<main id="home">
+<section class="hero">
+ <div class="container hero-grid">
+  <div class="reveal">
+   <span class="badge"><span class="live"></span> AI automation for growing businesses</span>
+   <h1>Turn repetitive work into <span class="gradient">intelligent workflows.</span></h1>
+   <p class="hero-copy">We help growing businesses automate manual operations using AI agents, workflow automation, intelligent document processing and modern Quality Engineering.</p>
+   <div class="actions"><a class="btn primary" href="#contact">Book a Free Automation Assessment →</a><a class="btn" href="#solutions">Explore solutions</a></div>
+   <div class="micro"><span>Human-in-the-loop controls</span><span>Secure tool integrations</span><span>Built around your workflow</span></div>
+  </div>
+  <div class="hero-card reveal">
+   <div class="browser"><div class="browserbar"><i></i><i></i><i></i><span style="margin-left:auto;font-size:10px;color:#98a2b3">automation dashboard</span></div>
+    <div class="screen"><div class="screen-label">Workflow status</div><div class="metric">Intelligent Operations</div>
+     <div class="mini-grid"><div class="mini"><b>Documents</b><small>Extract · Validate · Route</small></div><div class="mini"><b>Agents</b><small>Retrieve · Reason · Act</small></div></div>
+     <div class="pipeline"><div class="pipe">01 · Business request</div><div class="pipe on">02 · AI orchestration</div><div class="pipe">03 · Knowledge + tools</div><div class="pipe">04 · Validation + response</div></div>
+    </div>
+   </div>
+  </div>
+ </div>
+</section>
+
+<div class="trust"><div class="container trustin"><span class="trust-label">Capabilities</span><div class="trust-items"><span>AI Agents</span><span>RAG & Knowledge</span><span>MCP Integrations</span><span>Python Automation</span><span>Quality Engineering</span></div></div></div>
+
+<section id="services"><div class="container">
+ <div class="section-head reveal"><div class="eyebrow">01 · Services</div><h2>AI that solves operational problems—not AI for its own sake.</h2><p class="lead">Start with one workflow, prove value, then expand automation where it makes business sense.</p></div>
+ <div class="grid4">
+  <article class="card reveal"><div class="icon">01</div><h3>AI Workflow Automation</h3><p>Automate repetitive email, support, reporting and operational workflows with approval points where people need control.</p></article>
+  <article class="card reveal"><div class="icon">02</div><h3>Intelligent Documents</h3><p>Extract, validate and route information from invoices, purchase orders, PDFs and business documents.</p></article>
+  <article class="card reveal"><div class="icon">03</div><h3>AI Agents & Knowledge</h3><p>Build internal assistants that retrieve trusted business knowledge and use approved tools to complete tasks.</p></article>
+  <article class="card reveal"><div class="icon">04</div><h3>AI Quality Engineering</h3><p>Accelerate Python/Selenium automation, test generation, regression coverage and failure analysis.</p></article>
+ </div>
+</div></section>
+
+<section class="dark"><div class="container problem-grid">
+ <div class="reveal"><div class="eyebrow">02 · Why automate</div><h2>Your team should not spend its best hours moving information between systems.</h2><p class="lead">We focus on workflows where people repeatedly read, copy, validate, search, reconcile or report information.</p>
+  <div class="list">
+   <div class="list-item"><span class="check">✓</span><span>Manual document and invoice processing</span></div>
+   <div class="list-item"><span class="check">✓</span><span>Information scattered across PDFs, databases and tools</span></div>
+   <div class="list-item"><span class="check">✓</span><span>Repetitive customer and internal support requests</span></div>
+   <div class="list-item"><span class="check">✓</span><span>Slow regression testing and repetitive QA work</span></div>
+  </div>
+ </div>
+ <div class="arch reveal" id="architecture"><div class="arch-top"><span class="arch-title">Example enterprise AI workflow</span><span class="status">Controlled flow</span></div>
+  <div class="flow"><div class="node">Business User</div><div class="arrow">↓</div><div class="node accent">AI Orchestrator</div><div class="arrow">↓</div><div class="node">RAG / Business Knowledge</div><div class="arrow">↓</div><div class="node">MCP / Approved Business Tools</div><div class="arrow">↓</div><div class="node">Validation & Guardrails</div><div class="arrow">↓</div><div class="node accent">Business Response / Action</div></div>
+ </div>
+</div></section>
+
+<section id="solutions"><div class="container">
+ <div class="section-head reveal"><div class="eyebrow">03 · Solutions</div><h2>Start with a workflow your team already understands.</h2><p class="lead">Examples of practical projects that can be scoped into a focused proof of concept.</p></div>
+ <div class="cases">
+  <article class="case reveal"><div class="case-tag">Operations</div><h3>Invoice & document automation</h3><p>Extract fields, validate business rules, identify exceptions and route work to the right person or system.</p></article>
+  <article class="case reveal"><div class="case-tag">Support</div><h3>Internal knowledge assistant</h3><p>Answer recurring questions from approved company knowledge and escalate cases that require human decisions.</p></article>
+  <article class="case reveal"><div class="case-tag">Data</div><h3>Operational reporting</h3><p>Bring information from approved sources together and generate consistent summaries for teams and managers.</p></article>
+  <article class="case reveal"><div class="case-tag">Quality</div><h3>AI-assisted test engineering</h3><p>Generate test scenarios, automate regression flows and accelerate analysis of failures and defects.</p></article>
+  <article class="case reveal"><div class="case-tag">Service</div><h3>Ticket triage & routing</h3><p>Classify requests, retrieve relevant information, recommend next actions and route exceptions.</p></article>
+  <article class="case reveal"><div class="case-tag">Field operations</div><h3>Maintenance intelligence</h3><p>Combine asset data, service history and documents to support maintenance analysis and recommendations.</p></article>
+ </div>
+</div></section>
+
+<section id="process"><div class="container">
+ <div class="section-head reveal"><div class="eyebrow">04 · Process</div><h2>From business problem to working automation.</h2></div>
+ <div class="process">
+  <div class="card step reveal"><div class="stepnum">STEP 01</div><h3>Discover</h3><p>Map the workflow, inputs, decisions, exceptions and desired outcome.</p></div>
+  <div class="card step reveal"><div class="stepnum">STEP 02</div><h3>Prototype</h3><p>Build a focused proof of concept using representative workflow data.</p></div>
+  <div class="card step reveal"><div class="stepnum">STEP 03</div><h3>Validate</h3><p>Add retrieval, permissions, validation, guardrails and human approval.</p></div>
+  <div class="card step reveal"><div class="stepnum">STEP 04</div><h3>Scale</h3><p>Measure results, integrate with business systems and expand carefully.</p></div>
+ </div>
+</div></section>
+
+<section><div class="container">
+ <div class="section-head reveal"><div class="eyebrow">05 · Engagements</div><h2>Choose the starting point that fits your workflow.</h2><p class="lead">Indicative packages are designed to start conversations; the final scope is based on your workflow and integration needs.</p></div>
+ <div class="package-grid">
+  <article class="package reveal"><h3>Automation Discovery</h3><div class="sub">For teams exploring their first workflow.</div><ul><li>Workflow assessment</li><li>Automation opportunity map</li><li>Architecture recommendation</li><li>Implementation roadmap</li></ul><a class="btn" style="margin-top:18px" href="#contact">Discuss your workflow</a></article>
+  <article class="package featured reveal"><span class="ribbon">Popular starting point</span><h3>Proof of Concept</h3><div class="sub">For one focused business process.</div><ul><li>Focused AI workflow</li><li>Knowledge/RAG integration where needed</li><li>Tool or data integration</li><li>Validation and guardrails</li></ul><a class="btn accent" style="margin-top:18px" href="#contact">Plan a POC</a></article>
+  <article class="package reveal"><h3>Automation Build</h3><div class="sub">For a production-oriented workflow.</div><ul><li>End-to-end implementation</li><li>Business-system integration</li><li>Testing and exception handling</li><li>Handover and support option</li></ul><a class="btn" style="margin-top:18px" href="#contact">Request a discussion</a></article>
+ </div>
+</div></section>
+
+<section id="about"><div class="container about-grid">
+ <div class="reveal"><div class="eyebrow">06 · Our approach</div><h2>Automation with business controls built in.</h2><p class="lead">AI should not become a black box inside your operations. We design workflows around trusted information, explicit tool access, validation and clear exception handling.</p><a class="btn primary" href="#contact">Talk about your process →</a></div>
+ <div class="principles reveal">
+  <div class="principle"><b>Business-first</b><span>Start from a measurable workflow problem, not a technology demo.</span></div>
+  <div class="principle"><b>Controlled access</b><span>Connect agents to approved data and tools rather than everything.</span></div>
+  <div class="principle"><b>Human oversight</b><span>Keep people involved where decisions or exceptions require judgment.</span></div>
+  <div class="principle"><b>Testable systems</b><span>Use validation and Quality Engineering practices around automation.</span></div>
+  <div class="principle"><b>Incremental delivery</b><span>Prove one workflow before expanding the scope.</span></div>
+  <div class="principle"><b>Clear handover</b><span>Document the workflow so your team understands how it operates.</span></div>
+ </div>
+</div></section>
+
+<section id="faq"><div class="container">
+ <div class="section-head reveal"><div class="eyebrow">07 · FAQ</div><h2>Questions businesses usually ask.</h2></div>
+ <div class="faq">
+  <details><summary>Do we need an AI team to work with you?</summary><p>No. The starting point is the business workflow. We can help with discovery, prototype development and the technical implementation.</p></details>
+  <details><summary>Can you connect AI to our existing databases and tools?</summary><p>Yes, where the required integration is technically and operationally appropriate. The design can include APIs, databases and controlled tool interfaces such as MCP.</p></details>
+  <details><summary>Will the AI make decisions without approval?</summary><p>That depends on the workflow. Approval steps, validation and exception handling can be designed into the process so sensitive actions are reviewed by people.</p></details>
+  <details><summary>Can we start with a small project?</summary><p>Yes. A focused proof of concept is often a practical starting point before expanding to additional workflows.</p></details>
+  <details><summary>Do you only work with Bangalore companies?</summary><p>No. Bangalore is the initial focus, but projects can be delivered for businesses elsewhere in India depending on the engagement.</p></details>
+ </div>
+</div></section>
+
+<section class="cta"><div class="container"><div class="cta-box reveal">
+ <div><div class="eyebrow">08 · Start here</div><h2>Have a repetitive process worth automating?</h2><p>Bring us one workflow. We'll help identify where AI and automation could reduce manual effort while keeping business controls visible.</p></div>
+ <a class="btn" href="#contact">Book a Free Assessment →</a>
+</div></div></section>
+
+<section id="contact"><div class="container contact-grid">
+ <div class="reveal"><div class="eyebrow">09 · Contact</div><h2>Let's find your first automation opportunity.</h2><p class="lead">Tell us what your team currently does manually. We'll use that context to shape the first conversation.</p>
+  <div class="contact-points">
+   <div class="contact-point"><b>Location</b><span>Bangalore · India</span></div>
+   <div class="contact-point"><b>Email</b><span>hello@yourcompany.com</span></div>
+   <div class="contact-point"><b>Best for</b><span>SMEs, startups and growing technology-enabled businesses</span></div>
+  </div>
+ </div>
+ <form id="leadForm" name="automation-enquiry" method="POST" data-netlify="true" data-netlify-honeypot="bot-field" class="reveal">
+  <input type="hidden" name="form-name" value="automation-enquiry"><p style="display:none"><label>Do not fill this out: <input name="bot-field"></label></p><div class="form-grid">
+   <div class="field"><label>Name</label><input id="name" name="name" required placeholder="Your name"></div>
+   <div class="field"><label>Work email</label><input id="email" name="email" type="email" required placeholder="you@company.com"></div>
+   <div class="field"><label>Company</label><input id="company" name="company" placeholder="Company name"></div>
+   <div class="field"><label>Company size</label><select id="size" name="company_size"><option>1–20</option><option>21–50</option><option>51–100</option><option>101–300</option><option>300+</option></select></div>
+   <div class="field full"><label>What would you like to automate?</label><textarea id="message" name="message" required placeholder="Example: We manually process invoices received by email and enter the details into our system."></textarea></div>
+  </div>
+  <p class="form-note">This demo form opens your email client. Replace the placeholder email address before publishing.</p>
+  <button class="btn primary" type="submit">Send Automation Enquiry →</button>
+ </form>
+</div></section>
+</main>
+
+<footer><div class="container footer-grid"><div>© 2026 AI Automation Studio · Bangalore, India</div><div class="footer-links"><a href="#services">Services</a><a href="#solutions">Solutions</a><a href="#contact">Contact</a><a href="privacy.html">Privacy</a><a href="terms.html">Terms</a></div></div></footer>
+<div id="toast">Your email draft is ready.</div>
+
+<script>
+function toggleMenu(){const m=document.getElementById('mobileMenu');m.style.display=m.style.display==='block'?'none':'block'}
+document.getElementById('leadForm').addEventListener('submit', async function(e){
+ e.preventDefault();
+ const form=this;
+ const data=new URLSearchParams(new FormData(form));
+ try{
+   const response=await fetch("/",{method:"POST",headers:{"Content-Type":"application/x-www-form-urlencoded"},body:data.toString()});
+   if(response.ok){
+     window.location.href="/thank-you.html";
+     return;
+   }
+ }catch(err){}
+ const name=document.getElementById('name').value.trim();
+ const email=document.getElementById('email').value.trim();
+ const company=document.getElementById('company').value.trim();
+ const size=document.getElementById('size').value;
+ const msg=document.getElementById('message').value.trim();
+ const subject=encodeURIComponent('Automation Assessment Enquiry');
+ const body=encodeURIComponent(`Name: ${name}\nWork email: ${email}\nCompany: ${company}\nCompany size: ${size}\n\nAutomation opportunity:\n${msg}`);
+ window.location.href=`mailto:hello@yourcompany.com?subject=${subject}&body=${body}`;
+});
+const obs=new IntersectionObserver(entries=>entries.forEach(e=>{if(e.isIntersecting)e.target.classList.add('visible')}),{threshold:.08});
+document.querySelectorAll('.reveal').forEach(el=>obs.observe(el));
+</script>
+</body>
+</html>
