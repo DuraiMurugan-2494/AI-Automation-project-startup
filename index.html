@@ -720,10 +720,9 @@ document.getElementById('leadForm').addEventListener('submit', function(e) {
   // Validate all required fields
   const nameOk = validateFieldFull('name');
   const emailOk = validateFieldFull('email');
-  const msgOk = validateFieldFull('message');
+  const msgOk   = validateFieldFull('message');
 
   if (!nameOk || !emailOk || !msgOk) {
-    // Focus first invalid field
     const first = ['name', 'email', 'message'].find(id => {
       const el = document.getElementById(id);
       return el && el.classList.contains('invalid');
@@ -739,26 +738,75 @@ document.getElementById('leadForm').addEventListener('submit', function(e) {
 
   const name    = document.getElementById('name').value.trim();
   const email   = document.getElementById('email').value.trim();
-  const company = document.getElementById('company').value.trim();
-  const size    = document.getElementById('size').value;
+  const company = document.getElementById('company').value.trim() || 'Not provided';
+  const size    = document.getElementById('size').value || 'Not provided';
   const msg     = document.getElementById('message').value.trim();
+  const date    = new Date().toLocaleDateString('en-IN', { day:'2-digit', month:'short', year:'numeric', hour:'2-digit', minute:'2-digit' });
+  const firstName = name.split(' ')[0];
 
-  const subject = encodeURIComponent('Automation Assessment Enquiry – IYANZA');
-  const body    = encodeURIComponent(
-    `Name: ${name}\nWork email: ${email}\nCompany: ${company || '(not provided)'}\nCompany size: ${size || '(not provided)'}\n\nAutomation opportunity:\n${msg}`
+  /* ── Clean inbound enquiry email ── */
+  const subject = encodeURIComponent(`[IYANZA Enquiry] ${name} – Automation Assessment`);
+
+  const body = encodeURIComponent(
+`══════════════════════════════════════════
+  NEW ENQUIRY — IYANZA.COM
+══════════════════════════════════════════
+
+CONTACT DETAILS
+──────────────────────────────────────────
+  Name          : ${name}
+  Email         : ${email}
+  Company       : ${company}
+  Company Size  : ${size}
+  Received      : ${date}
+──────────────────────────────────────────
+
+AUTOMATION REQUIREMENT
+──────────────────────────────────────────
+${msg}
+══════════════════════════════════════════
+
+
+──────────────────────────────────────────
+  SUGGESTED REPLY TO CUSTOMER
+  (Copy · edit · send to: ${email})
+──────────────────────────────────────────
+
+Subject: Re: Your Automation Enquiry – IYANZA
+
+Hi ${firstName},
+
+Thank you for reaching out to IYANZA.
+
+We've reviewed the workflow you described and it looks like a great candidate for automation. We'd love to explore this further with you.
+
+As a next step, I'd suggest a short 30-minute discovery call so we can understand your current process, the pain points, and what a practical automation solution could look like for your team.
+
+Would any of the following times work for you?
+  • [DATE & TIME OPTION 1]
+  • [DATE & TIME OPTION 2]
+  • [DATE & TIME OPTION 3]
+
+Alternatively, feel free to suggest a time that suits you best.
+
+Looking forward to connecting.
+
+Warm regards,
+[Your Name]
+IYANZA
+hello@iyanza.com
+──────────────────────────────────────────
+`
   );
 
-  // Small delay to show loading state before opening mailto
   setTimeout(() => {
     window.location.href = `mailto:hello@iyanza.com?subject=${subject}&body=${body}`;
     btn.disabled = false;
     btn.classList.remove('loading');
 
-    // Show success UI
     document.getElementById('formSuccess').classList.add('show');
     showToast('✓ Enquiry opened in your email client.', 'success');
 
-    // Reset after delay
     setTimeout(() => {
       document.getElementById('leadForm').reset();
       document.getElementById('formSuccess').classList.remove('show');
