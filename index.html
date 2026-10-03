@@ -5,7 +5,7 @@
 <meta name="viewport" content="width=device-width, initial-scale=1.0">
 <meta name="description" content="AI automation, intelligent document processing, enterprise AI agents and Quality Engineering for growing businesses in Bangalore and India.">
 <meta name="theme-color" content="#08111f">
-<title>AI Automation Studio | AI Automation for Growing Businesses </title>
+<title>AI Automation Studio | AI Automation for Growing Businesses</title>
 <style>
 :root{
  --ink:#0b1220;--ink2:#172033;--muted:#667085;--muted2:#98a2b3;--bg:#f7f9fc;--white:#fff;
@@ -196,15 +196,15 @@ footer{background:#fff;border-top:1px solid var(--line);padding:32px 0;color:#66
    <div class="contact-point"><b>Best for</b><span>SMEs, startups and growing technology-enabled businesses</span></div>
   </div>
  </div>
- <form id="leadForm" name="automation-enquiry" method="POST" data-netlify="true" data-netlify-honeypot="bot-field" class="reveal">
-  <input type="hidden" name="form-name" value="automation-enquiry"><p style="display:none"><label>Do not fill this out: <input name="bot-field"></label></p><div class="form-grid">
+ <form id="leadForm" name="automation-enquiry" method="POST" class="reveal">
+  <div class="form-grid">
    <div class="field"><label>Name</label><input id="name" name="name" required placeholder="Your name"></div>
    <div class="field"><label>Work email</label><input id="email" name="email" type="email" required placeholder="you@company.com"></div>
    <div class="field"><label>Company</label><input id="company" name="company" placeholder="Company name"></div>
    <div class="field"><label>Company size</label><select id="size" name="company_size"><option>1–20</option><option>21–50</option><option>51–100</option><option>101–300</option><option>300+</option></select></div>
    <div class="field full"><label>What would you like to automate?</label><textarea id="message" name="message" required placeholder="Example: We manually process invoices received by email and enter the details into our system."></textarea></div>
   </div>
-  <p class="form-note">This demo form opens your email client. Replace the placeholder email address before publishing.</p>
+  <p class="form-note">The enquiry form backend will be connected before launch. For now, this is a staging form.</p>
   <button class="btn primary" type="submit">Send Automation Enquiry →</button>
  </form>
 </div></section>
@@ -215,17 +215,8 @@ footer{background:#fff;border-top:1px solid var(--line);padding:32px 0;color:#66
 
 <script>
 function toggleMenu(){const m=document.getElementById('mobileMenu');m.style.display=m.style.display==='block'?'none':'block'}
-document.getElementById('leadForm').addEventListener('submit', async function(e){
+document.getElementById('leadForm').addEventListener('submit', function(e){
  e.preventDefault();
- const form=this;
- const data=new URLSearchParams(new FormData(form));
- try{
-   const response=await fetch("/",{method:"POST",headers:{"Content-Type":"application/x-www-form-urlencoded"},body:data.toString()});
-   if(response.ok){
-     window.location.href="/thank-you.html";
-     return;
-   }
- }catch(err){}
  const name=document.getElementById('name').value.trim();
  const email=document.getElementById('email').value.trim();
  const company=document.getElementById('company').value.trim();
