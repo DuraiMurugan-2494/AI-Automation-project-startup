@@ -1,9 +1,57 @@
 <!doctype html>
-<html lang="en"><head><meta charset="utf-8"><meta name="viewport" content="width=device-width,initial-scale=1">
-<title>Thank You | AI Automation Studio</title>
-<meta name="description" content="Thank you for contacting AI Automation Studio.">
+<html lang="en">
+<head>
+<meta charset="utf-8">
+<meta name="viewport" content="width=device-width, initial-scale=1">
+<title>Thank You | IYANZA</title>
+<meta name="description" content="Thank you for contacting IYANZA. We'll be in touch soon.">
+<link rel="icon" href="favicon.svg" type="image/svg+xml">
 <style>
-body{margin:0;background:#f7f9fc;color:#101827;font-family:Inter,system-ui,sans-serif;display:grid;place-items:center;min-height:100vh}
-main{max-width:620px;margin:24px;padding:42px;background:#fff;border:1px solid #e5e7eb;border-radius:22px;text-align:center;box-shadow:0 20px 60px rgba(15,23,42,.1)}
-h1{font-size:42px;letter-spacing:-.05em}p{color:#667085;line-height:1.7}a{display:inline-block;margin-top:15px;padding:12px 18px;background:#101827;color:#fff;border-radius:10px;text-decoration:none;font-weight:700}
-</style></head><body><main><div style="font-size:42px">✓</div><h1>Thanks for reaching out.</h1><p>Your enquiry has been received. We’ll review the workflow you described and get back to you.</p><a href="/">Return to website</a></main></body></html>
+  :root{--accent:#635bff;--accent2:#13b8a6;--ink:#101827;--muted:#667085;--bg:#f7f9fc;--line:#e5e7eb}
+  *{box-sizing:border-box;margin:0;padding:0}
+  body{background:var(--bg);color:var(--ink);font:15px/1.65 Inter,system-ui,sans-serif;display:grid;place-items:center;min-height:100vh;padding:24px}
+  main{max-width:580px;width:100%;padding:52px 44px;background:#fff;border:1px solid var(--line);border-radius:26px;text-align:center;box-shadow:0 20px 60px rgba(15,23,42,.08)}
+  .logo{display:inline-flex;align-items:center;gap:10px;font-weight:850;font-size:17px;letter-spacing:-.03em;margin-bottom:40px;text-decoration:none;color:var(--ink)}
+  .mark{width:36px;height:36px;border-radius:10px;background:linear-gradient(135deg,#635bff,#13b8a6);display:grid;place-items:center;color:#fff;font-weight:900;font-size:13px}
+  .logo-text{background:linear-gradient(100deg,#0b1220 30%,#635bff);-webkit-background-clip:text;background-clip:text;color:transparent}
+  .check-circle{width:72px;height:72px;border-radius:50%;background:linear-gradient(135deg,#635bff,#13b8a6);display:grid;place-items:center;margin:0 auto 24px;font-size:32px;color:#fff;animation:pop .5s cubic-bezier(.34,1.56,.64,1)}
+  @keyframes pop{from{transform:scale(0);opacity:0}to{transform:scale(1);opacity:1}}
+  h1{font-size:32px;font-weight:850;letter-spacing:-.04em;margin-bottom:12px}
+  p{color:var(--muted);font-size:15px;line-height:1.7;margin-bottom:28px}
+  a.btn{display:inline-flex;align-items:center;gap:8px;background:var(--ink);color:#fff;text-decoration:none;border-radius:11px;padding:12px 22px;font-size:13px;font-weight:750;transition:.2s}
+  a.btn:hover{background:#1a2640;transform:translateY(-1px);box-shadow:0 8px 22px rgba(15,23,42,.12)}
+  .divider{height:1px;background:var(--line);margin:28px 0}
+  .next-steps{text-align:left;font-size:13px;color:var(--muted)}
+  .next-steps strong{display:block;margin-bottom:8px;color:var(--ink);font-size:14px}
+  .next-steps ul{list-style:none;display:grid;gap:7px}
+  .next-steps li::before{content:"→";color:var(--accent);margin-right:8px;font-weight:900}
+</style>
+</head>
+<body>
+<main>
+  <a class="logo" href="/" aria-label="IYANZA – go to homepage">
+    <span class="mark">IY</span>
+    <span class="logo-text">IYANZA</span>
+  </a>
+
+  <div class="check-circle" role="img" aria-label="Success checkmark">✓</div>
+  <h1>Thanks for reaching out.</h1>
+  <p>Your enquiry has been received. We'll review the workflow you described and get back to you — typically within one business day.</p>
+
+  <div class="divider"></div>
+
+  <div class="next-steps">
+    <strong>What happens next</strong>
+    <ul>
+      <li>We'll review your workflow description</li>
+      <li>We'll reach out to schedule a short discovery call</li>
+      <li>We'll help identify the best automation starting point</li>
+    </ul>
+  </div>
+
+  <div class="divider"></div>
+
+  <a class="btn" href="/">← Return to website</a>
+</main>
+</body>
+</html>
